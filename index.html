@@ -177,10 +177,11 @@
             </div>
             <div class="col-lg-4 col-lg-offset-2">
                     <br><p align="left">
-                    This is a survey to help you select a cost-effitive ISP plan for you. 
+                    This is a survey to help you select a cost-effective ISP plan for you. 
                     <br><br>
                     1. Which Places you usually stay? <br>
                     <select name="1" form="1">
+                    <option value="0">-</option>
                     <option value="AC1">AC1</option>
                     <option value="AC2">AC2</option>
                     <option value="AC3">AC3</option>
@@ -190,6 +191,7 @@
                     <br><br>
                     2. How much for your budget of the data plan per month? <br>
                     <select name="2" form="2">
+                    <option value="0">-</option>
                     <option value="100">Under $100</option>
                     <option value="150">$100 - $150</option>
                     <option value="200">$150 - $200</option>
@@ -198,6 +200,7 @@
                     <br><br>
                     3. How much data you use average per month? <br>
                     <select name="3" form="3">
+                    <option value="0">-</option>
                     <option value="1g">Under 1GB</option>
                     <option value="2g">1GB - 3GB</option>
                     <option value="4g">3GB - 5GB</option>
@@ -206,24 +209,27 @@
                     <br><br>
                     4. Do you want to sign a contract? <br>
                     <select name="4" form="4">
+                    <option value="0">-</option>
                     <option value="y">Yes</option>
                     <option value="n">No</option>
                     </select>
                     <br><br>
                     5. If yes, how long do you wish to sign? <br>
                     <select name="5" form="5">
+                    <option value="0">-</option>
                     <option value="1/2">Half-Year</option>
                     <option value="1">One Year</option>
                     <option value="2">Two Year</option>
                     </select>
                     <br><br>
-                    <a href="#int">Click Me to get the Result!</a>
+                    <a href="https://ge1225.github.io/#int">Click Me to get the Result!</a>
                     </p>
            
         </div>
     </section>
 
 	<!-- My Guitar Session -->
+    
     <section class="int" id="int">
         <div class="container">
             <div class="row">
@@ -233,12 +239,33 @@
                     <div class="col-lg-4 col-lg-offset-2">
                     <br><p align="left">
                     This is the best plan for you after analysised your result from the survey: 
-                    <br>
-                    <img src="img/ppl.jpg" class="img-responsive img-centered" alt="ppl">
-                    <br>
-                    <h3><strong><a href="https://www.hk.chinamobile.com/tc/corporate_information/Service_Plans/Student_Plan/4.5G_local_service_plan.html"><font color="white">CMHK (Click Me!)</font></a></strong></h3>
-                    </p>
-                    
+                    <br></p>
+                    <?php
+                    $a = rand(0, 4); 
+                    echo "$a";
+                    echo mt_rand(5, 15);
+                    ?>
+                    <img src="img/" <?php echo $a ?> ".jpg" class="img-responsive img-centered" alt="isp">
+                    <?php
+                    switch ($a) {
+                    case 0: ?>
+                    <p><br><h3><strong><a href="https://www.hk.chinamobile.com/tc/corporate_information/Service_Plans/Student_Plan/4.5G_local_service_plan.html"><font color="white">CMHK (Click Me!)</font></a></strong></h3></p>
+                    <?php break; ?>
+                    <?php case 1: ?>
+                    <p><br><h3><strong><a href="http://www.sunmobile.com.hk/plan02/533.jhtml"><font color="white">SUN MOBILE (Click Me!)</font></a></strong></h3></p>
+                    <?php break; ?>
+                    <?php case 2:?>
+                    <p><br><h3><strong><a href="https://www.hkcsl.com/tc/u-plan/"><font color="white">CSL/1010 (Click Me!)</font></a></strong></h3></p>
+                    <?php break; ?>
+                    <?php case 3: ?>
+                    <p><br><h3><strong><a href="http://www.three.com.hk/website/appmanager/three/home?_nfpb=true&_pageLabel=P200470391219567710594&lang=eng&pageid=215102"><font color="white">3 (Click Me!)</font></a></strong></h3></p>
+                    <?php break; ?>
+                    <?php case 4: ?>
+                    <p><br><h3><strong><a href="https://shop.smartone.com/tc/Register_ServicePlan/acquisition_form.jsp?plan_id=3GBME&gclid=CjwKEAjwqIfLBRCk6vH_rJq7yD0SJACG18fr3Bn18CWaM97_jGjztvBuVG0hOOAOtVL_OA4e-fP1fhoCHq_w_wcB"><font color="white">SmarTone (Click Me!)</font></a></strong></h3></p>
+                    <?php 
+                    break;          
+                    }
+                    ?>
                 </div>
 
 
